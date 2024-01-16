@@ -1,0 +1,42 @@
+﻿@model Student;
+
+<form class="p-3 mt-2" id="student-form" onsubmit="saveStudent(event)">
+    <label class="fs-5 fw-bold">Student Form</label>
+    <div class="promotional-item-form-div p-3">
+        <div class="row gap-3 pt-3">
+            <div class="col">
+                <label asp-for="Name" class="mb-2">Name</label>
+                <input asp-for="Name" id="name" />
+            </div>
+            <div class="col">
+                <label asp-for="Email" class="mb-2">Email</label>
+                <input asp-for="Email" id="email" />
+            </div>
+        </div>
+        <div class="row gap-3 pt-3">
+            <div class="col">
+                <label asp-for="Phone" class="mb-2">Phone</label>
+                <input asp-for="Phone" id="phone" />
+            </div>
+            <div class="col">
+                <label asp-for="Address" class="mb-2">Address</label>
+                <input asp-for="Address" id="address" />
+            </div>
+        </div>
+        <div class="row gap-3 pt-3">
+            <div class="col">
+                <label asp-for="DateOfEnroll" class="mb-2">Phone</label>
+                <input asp-for="DateOfEnroll" id="date-of-enroll" />
+            </div>
+        </div>
+    </div>
+    <div class="d-flex gap-3">
+        <button id="btn-cancel" onclick="cancelButtonClicked()" type="button" class="btn btn-cancel btn-outline-danger align-content-center">Cancel</button>
+        <button id="btn-save" type="submit" class="btn btn-save text-center">Save</button>
+    </div>
+</form>
+
+@section Scripts
+{
+    <script src="~/js/student.js" asp-append-version="true"></script>
+}
